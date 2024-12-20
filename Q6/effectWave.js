@@ -130,3 +130,14 @@
 //   result.push(chunk);
 // }
 // console.log(result);
+
+function alphanumeric(string) {
+    //   return /^[0-9a-z]+$/i.test(string);
+    return /\w+/i.test(string);
+    }
+    
+    console.log(alphanumeric("Mazinkaiser"));
+    console.log(alphanumeric("hello world_"));
+    console.log(alphanumeric("PassW0rd"));
+    console.log(alphanumeric("     "));
+    

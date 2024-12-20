@@ -23,19 +23,31 @@
 // };
 // console.log(digital_root("16")); // 7
 // console.log(digital_root("942")); // 6
-// console.log(digital_root("132189")); // 6 
+// console.log(digital_root("132189")); // 6
 // console.log(digital_root("493193")); // 2
 
 // Решение 2
 // const digital_root = (n) => {
 //     if(n < 10){
-//         return
+//         return n
 //     }
 //     return (n % 9)
 // }
 // console.log(digital_root("16")); // 7
 // console.log(digital_root("942")); // 6
-// console.log(digital_root("132189")); // 6 
+// console.log(digital_root("132189")); // 6
 // console.log(digital_root("493193")); // 2
 
-
+// Решение 3
+// const digital_root = (n) => {
+//   while (n > 9) {
+//     n = ("" + n).split("").reduce((acum, elem) => {
+//       return +acum + +elem;
+//     });
+//   }
+//   return n;
+// };
+// console.log(digital_root("16")); // 7
+// console.log(digital_root("942")); // 6
+// console.log(digital_root("132189")); // 6
+// console.log(digital_root("493193")); // 2
